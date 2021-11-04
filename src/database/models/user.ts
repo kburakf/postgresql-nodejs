@@ -1,14 +1,14 @@
 import { Model } from 'objection';
 
-export default class Todo extends Model {
+export default class User extends Model {
   static get tableName() {
-    return 'todos';
+    return 'users';
   }
 
   id!: string;
-  user_id!: string;
-  title!: string;
-  done!: boolean;
+  name!: string;
+  surname!: string;
+  age!: string;
   created_at!: string;
   updated_at!: string;
 

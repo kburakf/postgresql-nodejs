@@ -3,11 +3,11 @@ module.exports = {
     development: {
         client: 'postgresql',
         connection: {
-            host: 'localhost',
-            port: '5432',
-            database: 'kursatfariz',
-            user: 'kursatfariz',
-            password: '123456'
+            host: process.env.HOST,
+            port: process.env.PORT,
+            database: process.env.DATABASE,
+            user: process.env.USER,
+            password: process.env.PASSWORD
         },
         pool: {
             min: 2,
@@ -20,3 +20,4 @@ module.exports = {
         }
     },
 };
+//# sourceMappingURL=config.js.map

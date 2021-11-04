@@ -4,6 +4,7 @@ import { json, urlencoded } from 'body-parser';
 import knex from './src/database/knex';
 import { Model } from 'objection';
 import todos from './src/routes/todos';
+import users from './src/routes/users';
 
 Model.knex(knex);
 
@@ -14,10 +15,12 @@ app.use(cors());
 app.use(json());
 app.use(urlencoded({ extended: true }));
 
+
+app.use('/todos', todos);
+app.use('/users', users);
+
 app.listen(port, () => {
   console.log(`The port is running on '${port}'`);
 });
-
-app.use('/todos', todos);
 
 export default app;
