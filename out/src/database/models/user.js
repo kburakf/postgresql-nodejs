@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const objection_1 = require("objection");
-class Todo extends objection_1.Model {
+class User extends objection_1.Model {
     static get tableName() {
-        return 'todos';
+        return 'users';
     }
     $beforeInsert() {
         this.created_at = new Date().toISOString();
@@ -15,6 +15,6 @@ class Todo extends objection_1.Model {
     }
     ;
 }
-exports.default = Todo;
+exports.default = User;
 ;
-//# sourceMappingURL=todo.js.map
+//# sourceMappingURL=user.js.map
